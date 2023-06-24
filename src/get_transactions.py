@@ -1,7 +1,13 @@
 import requests
 
-def get_transactions():
-    response = requests.get('https://api.npoint.io/369c3f185c6c1d7b30c3')
+def get_transactions(url):
+    response = requests.get(url)
+    return response
+
+def response_convert(response):
     transactions = response.json()
-    return transactions
+    return(transactions)
+
+
+
 
